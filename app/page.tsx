@@ -749,6 +749,42 @@ export default function Home() {
               </div>
             </motion.div>
           </div>
+
+          <div className="max-w-4xl mx-auto mt-12">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="bg-white p-8 rounded-lg shadow-lg"
+            >
+              <h3 className="text-2xl font-semibold mb-6 text-green-600">Potential Savings</h3>
+              
+              <div className="space-y-6">
+                <div className="flex justify-between items-center p-4 bg-green-50 rounded-lg">
+                  <span className="font-medium">Lower Cost of Capital</span>
+                  <span className="text-green-600 font-bold">Attract ESG-focused investors</span>
+                </div>
+                <div className="flex justify-between items-center p-4 bg-green-50 rounded-lg">
+                  <span className="font-medium">Market Share Gain</span>
+                  <span className="text-green-600 font-bold">Optimized green product pricing</span>
+                </div>
+                <div className="flex justify-between items-center p-4 bg-green-50 rounded-lg">
+                  <span className="font-medium">Operational Savings</span>
+                  <span className="text-green-600 font-bold">5-10 hours per product approval</span>
+                </div>
+                <div className="border-t pt-4 mt-4">
+                  <div className="flex justify-between items-center text-lg font-bold">
+                    <span>Largest Quantifiable Saving</span>
+                    <span className="text-green-600">€500K - €5M</span>
+                  </div>
+                  <div className="text-sm text-gray-600 mt-2">
+                    Avoiding potential fines for greenwashing or misreporting under SFDR
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
