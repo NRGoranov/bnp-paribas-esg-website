@@ -257,6 +257,9 @@ export default function Home() {
             className="text-center mb-12 md:mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 md:mb-8">The Challenge</h2>
+            <p className="text-lg text-gray-700 mb-8 max-w-4xl mx-auto">
+              BNP Paribas needs to integrate four ESG criteria in order to be able to manage risks, meet investor expectations, comply with regulations, and create long-term value.
+            </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto">
               <div className="text-center">
                 <div className="w-16 h-16 md:w-20 md:h-20 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-3 md:mb-4">
@@ -394,6 +397,18 @@ export default function Home() {
               </motion.div>
             ))}
           </div>
+          
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mt-12"
+          >
+            <p className="text-lg text-gray-700 max-w-4xl mx-auto">
+              BNP Paribas Cardif will be able to evaluate the degree of alignment between the specific features, terms, and risk profile of the insurance product and organization's four risk criteria, which scoring will determine the product's compliance level.
+            </p>
+          </motion.div>
         </div>
       </section>
 
@@ -505,27 +520,59 @@ export default function Home() {
             </p>
           </motion.div>
 
-          <div className="relative">
-            <div className="absolute left-8 top-0 bottom-0 w-1 bg-gray-200"></div>
-            {phases.map((phase, index) => (
+          <div className="grid lg:grid-cols-3 gap-8">
+            {/* Main Timeline - 4 Phases */}
+            <div className="lg:col-span-2">
+              <div className="relative">
+                <div className="absolute left-8 top-0 bottom-0 w-1 bg-gray-200"></div>
+                {phases.slice(0, 4).map((phase, index) => (
+                  <motion.div
+                    key={phase.id}
+                    initial={{ opacity: 0, x: -50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    className="relative flex items-center mb-12"
+                  >
+                    <div className="absolute left-6 w-4 h-4 bg-bnp-green rounded-full border-4 border-white shadow-lg"></div>
+                    <div className="ml-16 bg-white p-6 rounded-lg shadow-lg card-hover w-full max-w-md">
+                      <div className="flex justify-between items-start mb-2">
+                        <h3 className="text-lg font-semibold">{phase.title}</h3>
+                        <span className="text-sm text-bnp-green font-medium">{phase.duration}</span>
+                      </div>
+                      <p className="text-gray-600">{phase.description}</p>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+
+            {/* Ongoing Process - Right Side */}
+            <div className="lg:col-span-1">
               <motion.div
-                key={phase.id}
-                initial={{ opacity: 0, x: -50 }}
+                initial={{ opacity: 0, x: 50 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
-                className="relative flex items-center mb-12"
+                className="bg-gradient-to-br from-blue-50 to-green-50 p-6 rounded-lg shadow-lg h-fit"
               >
-                <div className="absolute left-6 w-4 h-4 bg-bnp-green rounded-full border-4 border-white shadow-lg"></div>
-                <div className="ml-16 bg-white p-6 rounded-lg shadow-lg card-hover w-full max-w-md">
-                  <div className="flex justify-between items-start mb-2">
-                    <h3 className="text-lg font-semibold">{phase.title}</h3>
-                    <span className="text-sm text-bnp-green font-medium">{phase.duration}</span>
+                <h3 className="text-xl font-semibold mb-4 text-gray-800">Ongoing Process</h3>
+                <div className="space-y-4">
+                  <div className="flex items-start">
+                    <div className="w-3 h-3 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                    <div>
+                      <h4 className="font-medium text-gray-800">{phases[4].title}</h4>
+                      <p className="text-sm text-gray-600 mt-1">{phases[4].description}</p>
+                    </div>
                   </div>
-                  <p className="text-gray-600">{phase.description}</p>
+                  <div className="border-t pt-4 mt-4">
+                    <p className="text-sm text-gray-600">
+                      Continuous monitoring and improvement of ESG risk assessment framework
+                    </p>
+                  </div>
                 </div>
               </motion.div>
-            ))}
+            </div>
           </div>
         </div>
       </section>
@@ -663,58 +710,7 @@ export default function Home() {
             </p>
           </motion.div>
 
-          <div className="grid lg:grid-cols-2 gap-12">
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="bg-white p-8 rounded-lg shadow-lg"
-            >
-              <h3 className="text-2xl font-semibold mb-6 text-green-600">Potential Savings</h3>
-              
-              {/* ROI Chart Placeholder */}
-              <div className="bg-gradient-to-r from-green-100 to-blue-100 rounded-lg p-6 mb-6">
-                <div className="flex items-center justify-between mb-4">
-                  <h4 className="font-semibold text-gray-800">ROI Projection</h4>
-                  <span className="text-2xl font-bold text-green-600">3,900% - 17,800%</span>
-                </div>
-                <div className="w-full bg-white rounded-lg p-4">
-                  <div className="flex items-end space-x-2 h-20">
-                    <div className="bg-green-200 rounded-t w-8 h-8"></div>
-                    <div className="bg-green-300 rounded-t w-8 h-12"></div>
-                    <div className="bg-green-400 rounded-t w-8 h-16"></div>
-                    <div className="bg-green-500 rounded-t w-8 h-20"></div>
-                  </div>
-                  <p className="text-sm text-gray-600 mt-2 text-center">3-Year ROI Projection</p>
-                </div>
-              </div>
-              
-              <div className="space-y-6">
-                <div className="flex justify-between items-center p-4 bg-green-50 rounded-lg">
-                  <span className="font-medium">Lower Cost of Capital</span>
-                  <span className="text-green-600 font-bold">Attract ESG-focused investors</span>
-                </div>
-                <div className="flex justify-between items-center p-4 bg-green-50 rounded-lg">
-                  <span className="font-medium">Market Share Gain</span>
-                  <span className="text-green-600 font-bold">Optimized green product pricing</span>
-                </div>
-                <div className="flex justify-between items-center p-4 bg-green-50 rounded-lg">
-                  <span className="font-medium">Operational Savings</span>
-                  <span className="text-green-600 font-bold">5-10 hours per product approval</span>
-                </div>
-                <div className="border-t pt-4 mt-4">
-                  <div className="flex justify-between items-center text-lg font-bold">
-                    <span>Largest Quantifiable Saving</span>
-                    <span className="text-green-600">€500K - €5M</span>
-                  </div>
-                  <div className="text-sm text-gray-600 mt-2">
-                    Avoiding potential fines for greenwashing or misreporting under SFDR
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-
+          <div className="max-w-4xl mx-auto">
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
