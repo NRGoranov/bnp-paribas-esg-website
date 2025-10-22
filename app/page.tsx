@@ -47,10 +47,10 @@ export default function Home() {
   }
 
   const phases = [
-    { id: 1, title: 'Foundation & Criteria Definition', duration: '4-6 weeks', description: 'Define 4 ESG criteria, design indicator matrix, set strategic weights, define risk thresholds' },
-    { id: 2, title: 'System Integration & Data Sourcing', duration: '4-6 weeks', description: 'Data sourcing strategy, internal process integration, tool development, training' },
-    { id: 3, title: 'Product Assessment & Scoring', duration: '4-6 weeks', description: 'Indicator status determination, calculate criterion sub-scores, final alignment score' },
-    { id: 4, title: 'Underwriting & Pricing Decision', duration: '3-5 weeks', description: 'Risk vetting against thresholds, mitigation planning, pricing & product labelling' },
+    { id: 1, title: 'Foundation & Criteria Definition', duration: '2 weeks', description: 'Define 4 ESG criteria, design indicator matrix, set strategic weights, define risk thresholds' },
+    { id: 2, title: 'System Integration & Data Sourcing', duration: '2 weeks', description: 'Data sourcing strategy, internal process integration, tool development, training' },
+    { id: 3, title: 'Product Assessment & Scoring', duration: '2 weeks', description: 'Indicator status determination, calculate criterion sub-scores, final alignment score' },
+    { id: 4, title: 'Underwriting & Pricing Decision', duration: '2 weeks', description: 'Risk vetting against thresholds, mitigation planning, pricing & product labelling' },
     { id: 5, title: 'Review & Improvement', duration: 'Ongoing', description: 'Regulatory reporting, annual weighting review, indicator relevance check' }
   ]
 
@@ -60,7 +60,7 @@ export default function Home() {
       icon: Shield,
       color: 'text-green-600',
       bgColor: 'bg-green-50',
-      goal: 'Minimize environmental risks and drive responsible resource use.',
+      goal: 'Encourages practices to reduce environmental impact.',
       subCriteria: [
         {
           category: 'Climate Change & Physical Risks',
@@ -85,7 +85,7 @@ export default function Home() {
       icon: Users,
       color: 'text-blue-600',
       bgColor: 'bg-blue-50',
-      goal: 'Ensure accessibility and fairness in products and services.',
+      goal: 'Accessible to a broad audience.',
       subCriteria: [
         {
           category: 'Regulatory & Legal Risks',
@@ -106,7 +106,7 @@ export default function Home() {
       icon: TrendingUp,
       color: 'text-purple-600',
       bgColor: 'bg-purple-50',
-      goal: 'Align investment strategies with sustainable practices.',
+      goal: 'Responsible investment funds.',
       subCriteria: [
         {
           category: 'Reputational & Integrity Risks (Greenwashing)',
@@ -127,7 +127,7 @@ export default function Home() {
       icon: Target,
       color: 'text-orange-600',
       bgColor: 'bg-orange-50',
-      goal: 'Promote a positive societal impact while ensuring business sustainability.',
+      goal: 'BNP Paribas Cardif efforts in CSR - dedicated portion of premium supports relevant social or environmental causes.',
       subCriteria: [
         {
           category: 'Reputational & Trust Risks (Cause-Washing)',
@@ -146,17 +146,17 @@ export default function Home() {
   ]
 
   const stakeholders = [
-    { name: 'BNP Paribas Cardiff Executive Committee', role: 'Sponsor and approver', impact: 'Highest Impact (Go/No-Go)' },
+    { name: 'BNP Paribas Cardif Executive Committee', role: 'Sponsor and approver', impact: 'Highest Impact (Go/No-Go)' },
     { name: 'Steering Team (Users & Implementation)', role: 'Define indicators, adopt scoring tool', impact: 'Operational success depends on adoption' },
     { name: 'ESG Compliance Team - Paris', role: 'Provider of mandatory ESG data', impact: 'Data quality determines scoring mechanism' },
-    { name: 'BNP Paribas Cardiff Clients', role: 'Drive market demand for sustainable products', impact: 'Demand validates project financial benefit' }
+    { name: 'PAC (Project Approval Committee)', role: 'Review and authorize new products', impact: 'Highest Operational Impact' },
+    { name: 'BNP Paribas Cardif Clients', role: 'Drive market demand for sustainable products', impact: 'Demand validates project financial benefit' }
   ]
 
   const benefits = [
     { 
       category: 'Financial Savings (Quantifiable)', 
       items: [
-        'Avoiding Compliance Fines: €500K - €5M (BGN 977,915 - BGN 9,779,150)',
         'Lower Cost of Capital: Attract ESG-focused investors',
         'Market Share Gain: Optimized pricing for green products',
         'Operational Savings: 5-10 hours saved per product approval'
@@ -692,10 +692,6 @@ export default function Home() {
               
               <div className="space-y-6">
                 <div className="flex justify-between items-center p-4 bg-green-50 rounded-lg">
-                  <span className="font-medium">Compliance Fine Avoidance</span>
-                  <span className="text-green-600 font-bold">€500K - €5M</span>
-                </div>
-                <div className="flex justify-between items-center p-4 bg-green-50 rounded-lg">
                   <span className="font-medium">Lower Cost of Capital</span>
                   <span className="text-green-600 font-bold">Attract ESG-focused investors</span>
                 </div>
@@ -730,24 +726,24 @@ export default function Home() {
               <div className="space-y-4">
                 <div className="flex justify-between items-center p-4 bg-blue-50 rounded-lg">
                   <span className="font-medium">Team Hours (5 people, 20% allocation)</span>
-                  <span className="text-blue-600 font-bold">1,150 hours</span>
+                  <span className="text-blue-600 font-bold">320 hours</span>
                 </div>
                 <div className="flex justify-between items-center p-4 bg-blue-50 rounded-lg">
                   <span className="font-medium">Project Duration</span>
-                  <span className="text-blue-600 font-bold">19-23 weeks</span>
+                  <span className="text-blue-600 font-bold">8 weeks</span>
                 </div>
                 <div className="flex justify-between items-center p-4 bg-blue-50 rounded-lg">
                   <span className="font-medium">Daily Commitment per Person</span>
-                  <span className="text-blue-600 font-bold">2 hours/day (20% of 10-hour day)</span>
+                  <span className="text-blue-600 font-bold">1.6 hours/day (20% of 8-hour day)</span>
                 </div>
                 <div className="flex justify-between items-center p-4 bg-blue-50 rounded-lg">
                   <span className="font-medium">Hourly Rate (Bulgarian Market)</span>
-                  <span className="text-blue-600 font-bold">7.69 - 34.14 BGN/hr</span>
+                  <span className="text-blue-600 font-bold">9.61 - 42.67 BGN/hr</span>
                 </div>
                 <div className="border-t pt-4 mt-4">
                   <div className="flex justify-between items-center text-lg font-bold">
                     <span>Total Estimated Cost (BGN)</span>
-                    <span className="text-gray-900">8,844 - 39,259 BGN</span>
+                    <span className="text-gray-900">3,076 - 13,655 BGN</span>
                   </div>
                   <div className="text-sm text-gray-600 mt-2">
                     *Based on Bulgarian salary range: 1,665 - 7,391 BGN/month<br/>
@@ -981,7 +977,7 @@ export default function Home() {
             className="text-center mt-12 md:mt-16"
           >
             <div className="bg-gray-700 rounded-lg p-4 md:p-6 max-w-2xl mx-auto">
-              <h4 className="text-base md:text-lg font-semibold mb-2">BNP Paribas Cardiff ESG Risk Integration</h4>
+              <h4 className="text-base md:text-lg font-semibold mb-2">BNP Paribas Cardif ESG Risk Integration</h4>
               <p className="text-gray-300 text-sm md:text-base">Innovating the way we Move, Learn and Adapt</p>
             </div>
           </motion.div>
@@ -991,13 +987,13 @@ export default function Home() {
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12">
         <div className="max-w-6xl mx-auto px-4 text-center">
-          <h3 className="text-2xl font-bold mb-4">BNP Paribas Cardiff ESG Risk Integration</h3>
+          <h3 className="text-2xl font-bold mb-4">BNP Paribas Cardif ESG Risk Integration</h3>
           <p className="text-gray-400 mb-6">
             Creating sustainable insurance solutions through comprehensive ESG risk assessment.
           </p>
           <div className="border-t border-gray-700 pt-6">
             <p className="text-gray-500 text-sm">
-              © 2024 BNP Paribas Cardiff. All rights reserved.
+              © 2024 BNP Paribas Cardif. All rights reserved.
             </p>
           </div>
         </div>
