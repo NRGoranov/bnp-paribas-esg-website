@@ -501,7 +501,7 @@ export default function Home() {
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-6">Implementation Timeline</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              5 Phases • 19-23 Weeks
+              5 Phases • 8 Weeks
             </p>
           </motion.div>
 
