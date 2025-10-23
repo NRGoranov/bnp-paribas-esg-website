@@ -147,7 +147,7 @@ export default function Home() {
 
   const stakeholders = [
     { name: 'BNP Paribas Cardif Executive Committee', role: 'Sponsor and approver', impact: 'Highest Impact (Go/No-Go)' },
-    { name: 'Steering Team (Users & Implementation)', role: 'Define indicators, adopt scoring tool', impact: 'Operational success depends on adoption' },
+    { name: 'Project Team', role: 'Define indicators, adopt scoring tool', impact: 'Operational success depends on adoption' },
     { name: 'ESG Compliance Team - Paris', role: 'Provider of mandatory ESG data', impact: 'Data quality determines scoring mechanism' },
     { name: 'PAC (Project Approval Committee)', role: 'Review and authorize new products', impact: 'Highest Operational Impact' },
     { name: 'BNP Paribas Cardif Clients', role: 'Drive market demand for sustainable products', impact: 'Demand validates project financial benefit' }
