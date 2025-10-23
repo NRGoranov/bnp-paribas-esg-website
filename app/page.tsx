@@ -589,7 +589,7 @@ export default function Home() {
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-6">Key Stakeholders</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              4 Main Stakeholder Groups
+              5 Main Stakeholder Groups
             </p>
           </motion.div>
 
